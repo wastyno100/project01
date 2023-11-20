@@ -1,0 +1,16 @@
+#sign_up_name,
+#sign_up_id {
+    width: 85%;
+}
+
+#zip_code {
+    width: 20%;
+}
+
+#btn_zip_code {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #dddddd;
+    width: 20%;
+    height: 49px;
+    color: rgb(61, 61, 61);
+}

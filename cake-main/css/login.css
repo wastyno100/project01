@@ -1,0 +1,27 @@
+.site-btn {
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+    width: 80%;
+}
+
+.breadcrumb__text {
+    margin-left: 30%;
+}
+
+.checkout__input__checkbox {
+    display: inline-block;
+}
+.checkout__input__checkbox p{
+    font-size: 15px;
+}
+
+.signin_id_pw {
+    float: right;
+}
+
+.signin_id_pw a{
+    color: rgb(85, 85, 85);
+    font-size: 14px;
+    margin-right: 25px;
+}
