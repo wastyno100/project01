@@ -1,62 +1,82 @@
 const userData = [
     {
-        userNa:'성동석',
-        phNo:'010-1234-5678',
-        userId:'rgijg0oywm',
-        userPw:'6bzct'
+        userNo:1,
+        admin:0,
+        name:'성동석',
+        phone:'010-1234-5678',
+        id:'rgijg0oywm',
+        pw:'6bzct'
     },
     {
-        userNa:'문우현',
-        phNo:'010-9081-2102',
-        userId:'gf2r8ag7kg',
-        userPw:'2c2xm'
+        userNo:2,
+        admin:0,
+        name:'문우현',
+        phone:'010-9081-2102',
+        id:'gf2r8ag7kg',
+        pw:'2c2xm'
     },
     {
-        userNa:'정민준',
-        phNo:'010-7391-4851',
-        userId:'i11dd77c30',
-        userPw:'dk0ep'
+        userNo:3,
+        admin:0,
+        name:'정민준',
+        phone:'010-7391-4851',
+        id:'i11dd77c30',
+        pw:'dk0ep'
     },
     {
-        userNa:'한시하',
-        phNo:'010-8339-5135',
-        userId:'l2gcr3jsum',
-        userPw:'agk04'
+        userNo:4,
+        admin:0,
+        name:'한시하',
+        phone:'010-8339-5135',
+        id:'l2gcr3jsum',
+        pw:'agk04'
     },
     {
-        userNa:'송경아',
-        phNo:'010-2039-9365',
-        userId:'jf78g0t65g',
-        userPw:'dovtp'
+        userNo:5,
+        admin:0,
+        name:'송경아',
+        phone:'010-2039-9365',
+        id:'jf78g0t65g',
+        pw:'dovtp'
     },
     {
-        userNa:'풍다혜',
-        phNo:'010-1564-4082',
-        userId:'cxo2old1iy',
-        userPw:'uo883'
+        userNo:6,
+        admin:0,
+        name:'풍다혜',
+        phone:'010-1564-4082',
+        id:'cxo2old1iy',
+        pw:'uo883'
     },
     {
-        userNa:'황소민',
-        phNo:'010-5922-4943',
-        userId:'gacpk8rnht',
-        userPw:'103gj'
+        userNo:7,
+        admin:0,
+        name:'황소민',
+        phone:'010-5922-4943',
+        id:'gacpk8rnht',
+        pw:'103gj'
     },
     {
-        userNa:'조태웅',
-        phNo:'010-6842-7245',
-        userId:'zcu8zavebd',
-        userPw:'iets2'
+        userNo:8,
+        admin:1,
+        name:'조태웅',
+        phone:'010-6842-7245',
+        id:'zcu8zavebd',
+        pw:'iets2'
     },
     {
-        userNa:'정철진',
-        phNo:'010-3729-0374',
-        userId:'wtnratn4hi',
-        userPw:'xmx5h'
+        userNo:9,
+        admin:0,
+        name:'정철진',
+        phone:'010-3729-0374',
+        id:'wtnratn4hi',
+        pw:'xmx5h'
     },
     {
-        userNa:'김은하',
-        phNo:'010-9365-7391',
-        userId:'c8yxfl5m84',
-        userPw:'0l65u'
+        userNo:10,
+        admin:0,
+        name:'김은하',
+        phone:'010-9365-7391',
+        id:'c8yxfl5m84',
+        pw:'0l65u'
     },
 ]
