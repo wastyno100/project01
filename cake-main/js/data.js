@@ -1,5 +1,13 @@
 const userData = [
     {
+        userNo:0,
+        admin:0,
+        name:'손윤제',
+        phone:'010-5324-5654',
+        id:'fei82jfjgq',
+        pw:'8f02k'
+    },
+    {
         userNo:1,
         admin:0,
         name:'성동석',
