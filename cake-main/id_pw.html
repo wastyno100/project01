@@ -180,13 +180,13 @@
                                 </div>
                                 <div class="checkout__input">
                                     <p>이름<span>*</span></p>
-                                    <input type="text">
+                                    <input type="text" class="id_find_name">
                                 </div>
                                 <div class="checkout__input">
                                     <p>전화번호<span>*</span></p>
-                                    <input type="text">
+                                    <input type="text" class="id_find_phone">
                                 </div>
-                                <button type="submit" class="site-btn">아이디 찾기</button>
+                                <button type="button" class="id_find_btn" onclick="idFindButton()">아이디 찾기</button>
                             </div>
 
                             <div id="find_pw"></div>
@@ -195,13 +195,13 @@
                                 </div>
                                 <div class="checkout__input">
                                     <p>아이디<span>*</span></p>
-                                    <input type="text">
+                                    <input type="text" class="pw_find_id">
                                 </div>
                                 <!-- <div class="checkout__input">
                                     <p>비밀번호<span>*</span></p>
                                     <input type="password">
                                 </div> -->
-                                <button type="submit" class="site-btn">비밀번호 찾기</button>
+                                <button type="button" class="pw_find_btn" onclick="pwFindButton()">비밀번호 찾기</button>
                             </div>
                             <!-- <div class="checkout__input__checkbox">
                                 <label for="diff-acc">
@@ -348,6 +348,8 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script src="js/id_pw.js"></script>
 </body>
 
 </html>

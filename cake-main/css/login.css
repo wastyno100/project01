@@ -34,3 +34,16 @@
     /* border-bottom: 1px solid black;
     display: inline-block; */
 }
+
+/* style.css에 .log_in도 있음 */
+.log_out {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .log_out:hover {
+    color: #000;
+  }
+  .log_out:focus {
+    color: #000;
+  }
