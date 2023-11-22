@@ -33,3 +33,55 @@ function zipCodeSearch() {
             }
         }).open();
     }
+    
+    // [필수]
+    // 비밀번호, 비밀번호 확인이 서로 같지않으면 회원가입 불가, alert - 회원가입 버튼 클릭에 조건을 넣어본다
+    // 모든 항목 입력 안했을 시 회원가입 불가 - 검색해보기
+    // 모든 약관 동의 체크 안할 시 회원가입 불가 - 검색해보기
+    // 회원가입 버튼 클릭시 이름, 아이디, 비밀번호, 전화번호는 로컬스토리지에 저장 - 세션스토리지 응용해서 해보기
+    // 로그인페이지에서도 로컬스토리지에 있는 회원가입 정보 불러와서 로그인 가능하게 연결
+    // 아이디 중복확인 (data.js, 로컬스토리지 id데이터랑 같은게 있으면 alert 또는 innerHTML, 회원가입 불가) - find 사용해보기
+
+    // [선택]
+    // 약관 스크롤 넣기
+    // 성별 선택 추가
+
+
+    // function signUpButton(){
+        
+    //     if(){
+    //         alert("넘어감");
+    //     }else if(){
+    //         alert("안넘어감");
+    //     }
+    // }
+
+    function idtesttest(){
+        const testid = document.querySelector('.testid').value;
+
+        const idfind = userData.find((data)=>{
+            return data.id == testid
+        })
+
+        if(idfind){
+            alert("중복되는 아이디가 존재합니다.");
+        }else if(testid.length == ""){
+            alert("아이디 입력값이 없습니다.");
+        }else if(!idfind){
+            alert("사용 가능한 아이디 입니다.");
+        }
+
+    }
+
+    function passwordMatch(){
+        const upPw = document.querySelector('.signup_pw').value;
+        const upPwCk = document.querySelector('.signup_pw_check').value;
+        
+        if(upPw.length == "" || upPwCk.length == ""){
+            alert("입력값이 없습니다.");
+        }else if(upPw == upPwCk){
+            alert("비번같음");
+        }else if(upPw != upPwCk){
+            alert("비번안같음");
+        }
+    }
