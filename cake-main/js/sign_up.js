@@ -49,7 +49,7 @@ function zipCodeSearch() {
     // 비밀번호, 비밀번호 확인이 서로 같지않으면 회원가입 불가, alert - 회원가입 버튼 클릭에 조건을 넣어본다 (완료)
     // 모든 항목 입력 안했을 시 회원가입 불가 - 검색해보기 (완료)
     // 모든 약관 동의 체크 안할 시 회원가입 불가 - 검색해보기 (완료)
-    // 회원가입 버튼 클릭시 이름, 아이디, 비밀번호, 전화번호는 로컬스토리지에 저장 - 세션스토리지 응용해서 해보기 (미완료)
+    // 회원가입 버튼 클릭시 이름, 아이디, 비밀번호, 전화번호는 로컬스토리지에 저장 - 세션스토리지 응용해서 해보기 (완료)
     // 로그인페이지에서도 로컬스토리지에 있는 회원가입 정보 불러와서 로그인 가능하게 연결 (미완료)
     // 아이디 중복확인 (data.js, 로컬스토리지 id데이터랑 같은게 있으면 alert 또는 innerHTML, 회원가입 불가) - find 사용해보기 (미완료, 로컬 스토리지에서도 데이터를 받아야함)
 
@@ -57,18 +57,24 @@ function zipCodeSearch() {
     // 약관 스크롤 넣기
     // 성별 선택 추가
 
-    // 체크박스는 밖에서 불러올시 true값 고정이 되어서 안쪽에 넣음 (왜 그런지 알아보자)
+
+
+
+
+
+
     // 회원가입버튼 관련 조건문들, if만 사용할시 한줄로 정리 가능하다.
     function signUpButton(){
-        const accOr = document.querySelector("input[name='acc-or']:checked");
-        const payment = document.querySelector("input[name='payment']:checked");
-        const paypal = document.querySelector("input[name='paypal']:checked");
+        const accOr = document.querySelector("#acc-or").checked;
+        const payment = document.querySelector("#payment").checked;
+        const paypal = document.querySelector("#paypal").checked;
 
         if(!username.value) return alert("이름을 입력 해주세요");
         if(!userId.value) return alert("아이디를 입력 해주세요");
         if(checkUserId()) return alert("중복된 아이디 입니다.");
         if(!userPw.value) return alert("비밀번호 확인이 틀립니다.");
         if(!userPwCheck.value) return alert("비밀번호 확인이 틀립니다.");
+        if(userPw.value != userPwCheck.value) return alert("비밀번호 확인이 틀립니다.");
         if(!userZipcode.value) return alert("우편번호를 입력 해주세요.");
         if(!userAdress.value) return alert("주소를 입력 해주세요.");
         if(!userAdressDetails.value) return alert("상세주소를 입력 해주세요.");
@@ -79,8 +85,20 @@ function zipCodeSearch() {
         if(!paypal) return alert("약관에 동의 해주세요.");
         else{
             alert("회원가입이 완료 되었습니다.")
-            return location.href="index.html";
-            // 회원가입 완료시 자동 로그인 되게 해야하고, 로컬 스토리지에 데이터를 보내야함
+
+            const localData = JSON.parse(localStorage.getItem("localData")) || [];
+            localData.push({
+                userNo:userData.length + 1,
+                admin:0,
+                name:username.value,
+                phone:userPhone.value,
+                id:userId.value,
+                pw:userPw.value
+            });
+            localStorage.setItem("localData",JSON.stringify(localData));
+
+            return location.href="login.html";
+            // 회원가입 완료시 자동 로그인 되게 해야하고, 로컬 스토리지에 데이터를 보내야함 (참고 https://velog.io/@byungjin0120/localStorage%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
         }
     }
 

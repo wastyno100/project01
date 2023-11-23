@@ -86,5 +86,5 @@ const userData = [
         phone:'010-9365-7391',
         id:'c8yxfl5m84',
         pw:'0l65u'
-    },
+    }
 ]
